@@ -1,0 +1,22 @@
+/*
+ Toggle Case
+
+You are given a character string A having length N, consisting of only lowercase and uppercase latin letters.
+
+You have to toggle case of each character of string A. For e.g 'A' is changed to 'a', 'e' is changed to 'E', etc.
+
+*/
+
+public class Solution {
+    public String solve(String A) {
+        int i=0;
+        char[] ch = A.toCharArray();
+        int n=A.length();
+        for(i=0;i<n;i++)
+        {
+            ch[i]=(char)(ch[i]^32);
+        }
+        String str = String.valueOf(ch);
+        return str;
+    }
+}
